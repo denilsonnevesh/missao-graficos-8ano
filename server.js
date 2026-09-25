@@ -1,5 +1,5 @@
 const express=require('express'),http=require('http'),{Server}=require('socket.io'),path=require('path');
-const app=express(),server=http.createServer(app),io=new Server(server),PORT=process.env.PORT||3000;app.use(express.static(path.join(__dirname,'public')));
+const app=express(),server=http.createServer(app),io=new Server(server),PORT=process.env.PORT||3000;app.use(express.static(__dirname));;
 const Q=[
 {p:1,t:'Aquecimento — Leitura',type:'bar',d:{l:['Seg','Ter','Qua','Qui'],v:[10,15,8,12]},q:'Em qual dia a quantidade foi maior?',o:['Segunda','Terça','Quarta','Quinta'],a:1,pts:100},
 {p:1,t:'Aquecimento — Comparando',type:'bar',d:{l:['A','B','C','D'],v:[12,7,15,10]},q:'Qual categoria apresenta o menor valor?',o:['A','B','C','D'],a:1,pts:100},
